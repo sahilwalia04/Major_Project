@@ -47,7 +47,7 @@ function Login() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/users/login', { email, password },{ withCredentials: true});
+      const response = await axios.post('http://13.49.73.215:5000/users/login', { email, password },{ withCredentials: true});
       console.log(response);
       
       localStorage.setItem("email",email)
