@@ -12,7 +12,6 @@ import Checkout from './Component/Checkout/Checkout';
 import Address from './Component/Address page/Address';
 import Login from './Component/Login&Signup/Login';
 import Signin from './Component/Login&Signup/Signin';
-<<<<<<< HEAD
 import PageNotFound from './Component/PageNotFound/PageNotFound';
 import ProtectedRoute from './Component/ProtectiveRoutes/ProtectedRoute';
 import { ToastContainer } from 'react-toastify'
@@ -47,32 +46,13 @@ function App() {
       </Route>
       <Route path='/login' element={<GoogleAuthWrapper2/>}/>
       <Route path='/signin' element={<GoogleAuthWrapper/>}/>
-=======
-
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-     <div>
-      <BrowserRouter>
-      <Routes>
-      <Route path='' element={<Home/>}/>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/signin' element={<Signin/>}/>
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
       <Route path='Shop' element={<Shop/>}/> 
       <Route path='Shop/Product' element={<Product1/>}/>
       <Route path='Shop/item' element={<ShowItem/>}/>
       <Route path='Shop/cart' element={<Addtocart/>}/>
       <Route path='Shop/address' element={<Address/>}/>
       <Route path="Shop/checkout" element={<Checkout/>} />
-<<<<<<< HEAD
       <Route path='*' element={<PageNotFound/>}/>
-=======
-       
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
       </Routes>
       </BrowserRouter>
        

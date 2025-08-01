@@ -69,11 +69,7 @@ function Address() {
         setError(null);
 
         try {
-<<<<<<< HEAD
             const response = await axios.post('http://localhost:5000/create-order', data);
-=======
-            const response = await axios.post('http://localhost:8000/create-order', data);
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
             window.location.href = response.data.url;
         } catch (error) {
             setError("Payment failed. Please try again.");

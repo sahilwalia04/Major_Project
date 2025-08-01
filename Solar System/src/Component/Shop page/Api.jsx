@@ -9,11 +9,7 @@ function Api() {
   const navigate = useNavigate();
  
   useEffect(() => {
-<<<<<<< HEAD
     fetch('http://localhost:5000/api/users')  // Ensure this points to your Express server's correct port
-=======
-    fetch('http://localhost:3000/api/users')  // Ensure this points to your Express server's correct port
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

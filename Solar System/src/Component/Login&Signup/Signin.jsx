@@ -4,32 +4,22 @@ import Navbar from '../Home Page/Navbar';
 import Navbar2 from '../Home Page/Navbar2';
 import Footer from '../Home Page/Footer';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
 import { useGoogleLogin } from '@react-oauth/google';
 import { googleAuth } from './api'; 
 import { toast } from 'react-toastify';
 import axios from 'axios';
-=======
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
 
 function Register() {
   const [isFocused, setIsFocused] = useState(false);
   const [isWrongEntry, setIsWrongEntry] = useState(false);
   const leftEyeRef = useRef(null);
   const rightEyeRef = useRef(null);
-<<<<<<< HEAD
    const [otp , setOtp] = useState(false)
   const [otpvalue , setOtpvalue] = useState("")
   const navigate = useNavigate();
   const emailvalue = useRef();
     // Form state
   const [username, setName] = useState('');
-=======
-  const navigate = useNavigate();
-  const emailvalue = useRef();
-    // Form state
-  const [name, setName] = useState('');
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -54,7 +44,6 @@ function Register() {
 
     setIsSubmitting(true);
 
-<<<<<<< HEAD
      try{
        const response = await  axios.post("http://localhost:5000/users/signin",{
             username:username,
@@ -78,29 +67,6 @@ function Register() {
       setMessage('Error registering user');
       console.log(error);
       
-=======
-    try {
-      const response = await fetch('http://localhost:5000/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setMessage(data.message);
-        // Optionally, redirect to login after successful registration
-        localStorage.setItem("email",emailvalue.current.value);
-        setTimeout(() => navigate('/login'), 2000);
-      } else {
-        setIsWrongEntry(true);
-        setMessage(data.message || 'Error registering user');
-      }
-    } catch (error) {
-      setIsWrongEntry(true);
-      setMessage('Error registering user');
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
     } finally {
       setIsSubmitting(false);
     }
@@ -134,9 +100,6 @@ function Register() {
   const navigateToLogin = () => {
     navigate('/login');
   };
-
-
-<<<<<<< HEAD
   const inputRefs = useRef([]);
   
     const handleChange = (index, e) => {
@@ -214,9 +177,6 @@ function Register() {
     onError: handleLoginSuccess,
     flow: 'auth-code',
   });
-=======
-
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
 
   return (
     <div className='bodysign'>
@@ -256,25 +216,18 @@ function Register() {
         <div className="hand"></div>
         <div className="hand rgt"></div>
         <h1>Panda Register</h1>
-<<<<<<< HEAD
         <button className="google-btn" type="button" onClick={loginWithGoogle}>
        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" />
       <span>Sign up with Google</span>
        </button>
 
-=======
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
         <div className="form-group">
           <input
             type="text"
             name="name"
             required
             className="form-control"
-<<<<<<< HEAD
             value={username}
-=======
-            value={name}
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
             onChange={(e) => setName(e.target.value)}
             onFocus={handleFocusIn}
             onBlur={handleFocusOut}

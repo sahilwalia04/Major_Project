@@ -37,7 +37,6 @@ function Sixth() {
     return (
         <div className='bodysixth' ref={starContainerRefh}>
             <div className='cont510'>
-<<<<<<< HEAD
                 <div className="container6">
                     <div className="content6">
                         <div className="recent-releases">
@@ -47,17 +46,6 @@ function Sixth() {
                             <div className="column">
                                 <div>
                                     <p className="date">
-=======
-                <div class="container6">
-                    <div class="content6">
-                        <div class="recent-releases">
-                            <h2>
-                                Recent Releases
-                            </h2>
-                            <div class="column">
-                                <div>
-                                    <p class="date">
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
                                         2018 December - App Release
                                     </p>
                                     <p>
@@ -84,23 +72,15 @@ function Sixth() {
                                     <p>
                                         Added Manual Search for objects
                                     </p>
-<<<<<<< HEAD
                                     <p className="date">
                                         2018 June - Web Release
                                     </p>
                                     <p className="link">
-=======
-                                    <p class="date">
-                                        2018 June - Web Release
-                                    </p>
-                                    <p class="link">
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
                                         [link] Added Astronomy Places page
                                     </p>
                                 </div>
                                 <div>
 
-<<<<<<< HEAD
                                     <p className="date">
                                         2018 March - Web Release
                                     </p>
@@ -123,30 +103,6 @@ function Sixth() {
                                         [link] Online Models page functional again
                                     </p>
                                     <p className="date">
-=======
-                                    <p class="date">
-                                        2018 March - Web Release
-                                    </p>
-                                    <p class="link">
-                                        [link] Added Paper Models page
-                                    </p>
-                                    <p class="link">
-                                        [link] Improved Layout for SkyDiary page
-                                    </p>
-                                    <p class="date">
-                                        2018 February - Web Release
-                                    </p>
-                                    <p class="link">
-                                        [link] Added Spacepedia page
-                                    </p>
-                                    <p class="date">
-                                        2018 January - Web Release
-                                    </p>
-                                    <p class="link">
-                                        [link] Online Models page functional again
-                                    </p>
-                                    <p class="date">
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
                                         2017 December - App Release
                                     </p>
                                     <p>
@@ -155,30 +111,18 @@ function Sixth() {
                                     <p>
                                         Added nav menu
                                     </p>
-<<<<<<< HEAD
                                     <p className="link">
-=======
-                                    <p class="link">
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
                                         [link] Find more in SolarLab
                                     </p>
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
                         <div className="latest">
-=======
-                        <div class="latest">
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
                             <h2>
                                 Latest
                             </h2>
                             <img alt="Image of a galaxy and other celestial objects" src={img3} />
-<<<<<<< HEAD
                             <p className="update">
-=======
-                            <p class="update">
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
                                 Major App Update!
                             </p>
                             <p className='abt'>

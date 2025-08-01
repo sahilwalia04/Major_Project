@@ -5,12 +5,9 @@ import Navbar2 from '../Home Page/Navbar2';
 import Footer from '../Home Page/Footer';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
 import { useGoogleLogin } from '@react-oauth/google';
 import { googleAuth } from './api'; 
 
-=======
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
 
 function Login() {
   const [isFocused, setIsFocused] = useState(false);
@@ -50,13 +47,9 @@ function Login() {
     e.preventDefault();
     setLoading(true);
     try {
-<<<<<<< HEAD
       const response = await axios.post('http://localhost:5000/users/login', { email, password },{ withCredentials: true});
       console.log(response);
       
-=======
-      const response = await axios.post('http://localhost:5000/login', { email, password });
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
       localStorage.setItem("email",email)
       navigate('/'); 
     } catch (error) {
@@ -78,7 +71,6 @@ function Login() {
     }
   };
 
-<<<<<<< HEAD
 
 
    // Google Authencation 
@@ -105,8 +97,6 @@ function Login() {
     flow: 'auth-code',
   });
 
-=======
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
   return (
     <div className='bodylogin'>
       <Navbar />
@@ -140,13 +130,10 @@ function Login() {
         <div className="hand"></div>
         <div className="hand rgt"></div>
         <h1>Panda Login</h1>
-<<<<<<< HEAD
          <button className="google-btn" type="button" onClick={loginWithGoogle}>
        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" />
       <span>Login with Google</span>
        </button>
-=======
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
         <div className="form-group">
           <input
             aria-label="Email"
