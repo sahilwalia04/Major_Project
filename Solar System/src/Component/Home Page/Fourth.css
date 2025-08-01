@@ -1,0 +1,72 @@
+.bodyfourth{
+    background-image: url("../images/skynight.jpg");
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    height: 50em;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+    
+}
+.cont411{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: large;
+    font-family: sans-serif;
+  
+   
+}
+.cont411 div{
+   border: 2px solid rgb(80, 135, 169) ;
+    margin: auto;
+    width: 20%;
+    padding: 0.7em;
+    font-size: medium;
+    background-color: rgb(3, 59, 94);
+    cursor: pointer;
+    border-radius: 10%;
+}
+.cont411 div:hover{
+    text-shadow: 5px 5px 20px white, 0 0 25px white, 0 0 50px white;
+}
+.cont412{
+    width: 65%;
+    margin: auto;
+    border: 2px solid rgb(80, 135, 169) ;
+    display: flex;
+    padding: 4em;
+}
+.inner41{
+    width: 60%;
+}
+.inner41 h1{
+    font-size: 3em;
+    margin-top: 0%;
+}
+.inner41 p{
+    width: 40%;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.inner42{
+    width: 50%;
+    color: rgb(98, 169, 213);
+}
+.inner42 ul li{
+    padding-bottom: 0.8em ;
+}
+.inner42 ul li a{
+    color: white;
+    text-decoration: none;
+}
+.inner42 ul li a:hover{
+    text-decoration: underline;
+}
+.inner42 p{
+    padding-bottom: 1em;
+    color: rgb(159, 205, 234);
+}

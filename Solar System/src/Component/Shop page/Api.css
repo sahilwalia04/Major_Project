@@ -1,0 +1,99 @@
+.bodyapi{
+   background-color: rgb(227, 227, 227);
+   padding: 1.6%;
+}
+.apihome{
+    font-family: monospace;
+    font-size: 1.4em;
+    color: rgb(110, 106, 106);
+}
+.bodyapi h1 {
+    font-family: sans-serif;
+}
+
+.items{
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   justify-content: space-between;
+   
+}
+.item{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-bottom: 12%;
+  cursor: pointer;
+  text-align: center;
+  font-family: sans-serif;
+}
+.item img{
+    height: 19em;
+}
+
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .items {
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bodyapi {
+        padding: 3%;
+    }
+
+    .items {
+        grid-template-columns: auto auto;
+        gap: 15px;
+    }
+
+    .apihome {
+        font-size: 1.2em;
+    }
+
+    .item img {
+        height: 15em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .items {
+        grid-template-columns: auto;
+    }
+
+    .item {
+        margin-bottom: 8%;
+    }
+
+    .item img {
+        height: 18em;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .p1container .size {
+        width: 40px;
+        height: 25px;
+        font-size: 0.9em;
+    }
+
+    .p1container .colors div {
+        width: 15px;
+        height: 15px;
+    }
+
+    .colorapi {
+        font-size: 0.8em;
+    }
+
+    .sizeapi {
+        font-size: 0.7em;
+    }
+
+    .p1head h1 {
+        font-size: 1.2em;
+    }
+}

@@ -1,0 +1,73 @@
+.bodyfive {
+    background-image: url("../images/earth night.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6%;
+}
+
+.cont51 {
+    width: 72%;
+    border: 1px solid rgb(98, 169, 213);
+    display: flex;
+    margin: auto;
+    padding: 4%;
+}
+
+.cont511 {
+    width: 40%;
+}
+
+.cont511 img {
+    height: 25em;
+    width: 20em;
+}
+
+.cont512 {
+    width: 60%;
+    color: white;
+    text-align: center;
+}
+
+.cont512 h1 {
+    font-size: 3em;
+}
+
+.cont512 div {
+    display: flex;
+}
+
+.cont512 div img {
+    height: 6em;
+    margin-right: 0.3em;
+}
+
+.clickhere4 {
+    padding: 1em;
+    background-color: rgb(55, 55, 209);
+    font-size: larger;
+    cursor: pointer;
+    width: 53%;
+    text-align: center;
+    font-family: sans-serif;
+    padding-left: 6em;
+    padding-right: 6em;
+    margin: auto;
+}
+.cont52{
+    width: 72%;
+    border: 1px solid rgb(98, 169, 213);
+    margin: auto;
+    padding: 4%;
+    color: white;
+    text-align: center;
+    padding-top:0% ;
+}
+.cont52 p{
+    width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+}
+.cont52 h1{
+    font-size: 3em;
+    font-family: sans-serif;
+}

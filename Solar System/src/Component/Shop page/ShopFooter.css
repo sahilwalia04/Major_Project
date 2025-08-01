@@ -1,0 +1,31 @@
+.SFbody{
+    background-color: #222229;   
+     padding: 2%;
+    color: white;
+}
+.sf1{
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif
+}
+.sf1 a{
+    color: white;
+    text-decoration: none;
+}
+.sf1 a:hover{
+    text-decoration: underline;
+}
+.sf3 a{
+    color: white;
+    text-decoration: none;
+   
+}
+.sf3 a:hover{
+    text-decoration: underline;
+}
+.sf3{
+    text-align: center;
+}
+.sf2 img{
+    width: 100%;
+}

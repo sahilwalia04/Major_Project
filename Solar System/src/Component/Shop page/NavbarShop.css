@@ -1,0 +1,407 @@
+.bodynav hr {
+    margin: 0;
+ }
+ 
+ .firstnav {
+     background-color: red;
+     padding: 0.7%;
+     font-family: sans-serif;
+ }
+ 
+ .firstnav p {
+    text-align: center;
+    margin: 0;
+    color: white;
+ }
+ 
+ .firstnav div {
+     font-size: 2em;
+     text-align: end;
+     color: white;
+     margin-top: -2%;
+     margin-right: 0.4em;
+     cursor: pointer;
+ }
+ 
+ .secondnav {
+     background-color: rgb(43, 38, 38);
+     color: white;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1%;
+     font-size: 1.5em;
+     font-family: sans-serif;
+     padding-left: 1em;
+ }
+ 
+ .secondnav div img {
+     height: 1.4em;
+ }
+ 
+ .imgss {
+     display: flex;
+     width: 8%;
+     justify-content: space-around;
+ }
+ 
+ .thirdnav {
+     display: flex;
+     background-color: rgb(43, 38, 38);
+     color: white;
+     font-family: sans-serif;
+     padding: 1%;
+ }
+ 
+ .thirdnav div {
+     padding-right: 1em;
+     font-size: large;
+     display: block;
+     cursor: pointer;
+ }
+ 
+ .thirdnav div img {
+     height: 1em;
+     margin-left: 0.4em;
+ }
+ 
+ .lastnav {
+     background-color: rgb(43, 38, 38);
+     color: white;
+ }
+ 
+ .lastnav div {
+     display: flex;
+     width: 28%;
+     margin: auto;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+ }
+ 
+ .redeem {
+     border: 1px solid white;
+     padding: 0.5em 1em;
+     margin-left: 3%;
+     cursor: pointer;
+     transition: background-color 0.3s ease, color 0.3s ease;
+ }
+ 
+ .redeem:hover {
+     background-color: white;
+     color: black;
+ }
+ 
+ .md {
+     margin-left: 0.6em;
+ }
+ 
+
+
+ 
+ .dropdown31 {
+     display: none;
+     position: absolute;
+     background-color:  rgb(43, 38, 38);;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+     padding: 10px;
+     z-index: 1;
+     border-radius: 4px;
+     transition: all 0.3s ease;
+     margin-top: 1em;
+ }
+ 
+ .innernav32:hover .dropdown31 {
+     display: block;
+ }
+ 
+ .innernav32 {
+     position: relative;
+     cursor: pointer;
+ }
+ 
+ .dropdown31 div {
+     padding: 5px 10px;
+     cursor: pointer;
+ }
+ 
+ .dropdown31 div:hover {
+     background-color: rgba(166, 154, 154, 0.05);
+ }
+ 
+ .dropdown31 {
+     opacity: 0;
+     visibility: hidden;
+     transform: translateY(-10px);
+     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+ }
+ 
+ .innernav32:hover .dropdown31 {
+     opacity: 1;
+     visibility: visible;
+     transform: translateY(0);
+ }
+ 
+
+
+
+ .dropdown32 {
+    display: none;
+    position: absolute;
+    background-color:  rgb(43, 38, 38);;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-top: 1em;
+    width: 200%;
+}
+
+.innernav33:hover .dropdown32 {
+    display: block;
+}
+
+.innernav33 {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown32 div {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown32 div:hover {
+    background-color: rgba(166, 154, 154, 0.05); 
+}
+
+.dropdown32 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.innernav33:hover .dropdown32 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+
+.dropdown33 {
+    display: none;
+    position: absolute;
+    background-color:  rgb(43, 38, 38);;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-top: 1em;
+    width: 200%;
+}
+
+.innernav34:hover .dropdown33 {
+    display: block;
+}
+
+.innernav34 {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown33 div {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown33 div:hover {
+    background-color: rgba(166, 154, 154, 0.05); /* Lighter hover state */
+}
+
+/* Optional: Style for smooth dropdown transition */
+.dropdown33 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.innernav34:hover .dropdown33 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+
+.dropdown34 {
+    display: none;
+    position: absolute;
+    background-color:  rgb(43, 38, 38);;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-top: 1em;
+    width: 150%;
+}
+
+.innernav35:hover .dropdown34 {
+    display: block;
+}
+
+.innernav35 {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown34 div {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown34 div:hover {
+    background-color: rgba(166, 154, 154, 0.05); 
+}
+
+.dropdown34 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.innernav35:hover .dropdown34 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+
+
+.dropdown35 {
+    display: none;
+    position: absolute;
+    background-color:  rgb(43, 38, 38);;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-top: 1em;
+    width: 120%;
+}
+
+.innernav36:hover .dropdown35 {
+    display: block;
+}
+
+.innernav36 {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown35 div {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown35 div:hover {
+    background-color: rgba(166, 154, 154, 0.05); 
+}
+
+.dropdown35 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.innernav36:hover .dropdown35 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+
+.dropdown36 {
+    display: none;
+    position: absolute;
+    background-color:  rgb(43, 38, 38);;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-top: 1em;
+    width: 120%;
+}
+
+.innernav37:hover .dropdown36 {
+    display: block;
+}
+
+.innernav37 {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown36 div {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown36 div:hover {
+    background-color: rgba(166, 154, 154, 0.05); 
+}
+
+.dropdown36 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.innernav37:hover .dropdown36 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.shopbtn{
+    cursor: pointer;
+}
+
+
+.shopbtn-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+.product-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  }
+  

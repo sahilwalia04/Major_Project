@@ -1,0 +1,59 @@
+.bodyseven{
+    background-image: url("../images/moon place.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10%;
+    padding-top: 0%;
+}
+.cont71{
+    width: 93%;
+    margin: auto;
+    display: flex;
+    color: white;
+    border: 1px solid  rgb(98, 169, 213);
+    padding: 2%;
+}
+.inner71{
+    width: 50%;
+    font-family: sans-serif;
+    display: flex;
+
+}
+.inner71 div{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 50%;
+    
+}
+.inner71 div img{
+    height: 7em;
+}
+.inner71 div p{
+    font-size: large;
+}
+.inner71 h1{
+    font-size: 3em;
+    padding-top: 0%;
+    margin-top: 0%;
+}
+
+.inner72 img{
+      height: 20em;
+}
+.buttomnav{
+    display: flex;
+    width: 75%;
+    margin: auto;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    padding: 5%;
+}
+.buttomnav div {
+    cursor: pointer;
+}
+.buttomnav div:hover{
+    text-shadow: 5px 5px 20px white, 0 0 25px white, 0 0 50px white;
+}

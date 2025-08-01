@@ -1,0 +1,83 @@
+.bodysixth{
+    color: #d1d1d1;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    
+}
+.bodysixth .container6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+.bodysixth .content6 {
+    display: flex;
+    background-color: transparent;
+    border: 1px solid rgb(98, 169, 213);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+}
+.bodysixth .recent-releases, .latest {
+   
+    padding: 20px;
+}
+.bodysixth .recent-releases {
+    border-right: 1px solid #2a2f3a;
+    width: 120%;
+   
+}
+.bodysixth .recent-releases h2, .latest h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.bodysixth .recent-releases p, .latest p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.bodysixth .recent-releases p.date {
+    font-style: italic;
+    color: #a1a1a1;
+}
+.bodysixth .recent-releases p.link, .latest p.link {
+    color: #00aaff;
+    cursor: pointer;
+}
+.latest{
+  padding-left: 6%;
+}
+.latest h2{
+    font-size: 2.3em;
+    text-align: center;
+    font-family: monospace;
+
+}
+.latest img {
+   margin: auto;
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+}
+.latest .update {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+.bodysixth .recent-releases .column {
+    display: flex;
+    flex-wrap: wrap;
+}
+.bodysixth .recent-releases .column div {
+    width: 50%;
+}
+.bodysixth .abt{
+    width: 60%;
+}

@@ -1,0 +1,100 @@
+.bodythird {
+    height: 75em;
+    background-image: url("../images/plannate.jpg"); /* Adjust the path as needed */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-size: cover;
+   color: white;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+   font-family: monospace;
+}
+.hrdiv{
+    height: 1.5em;
+    background-color:rgb(4, 50, 80) ;
+}
+.inner31{
+    margin: auto;
+    width: 55%;
+}
+.inner31 p{
+    font-size: 2.2em;
+   
+}
+.inner31 div{
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+
+}
+.like{
+    border: 1px solid white;
+   padding-left: 1em;
+   padding-right: 1em;
+   padding-top: 0.5em;
+   padding-bottom: 0.5em;
+   margin-right: 1em;
+   cursor: pointer;
+   font-size: large;
+   color: rgb(92, 140, 170);
+}
+.like:hover{
+    color: white;
+    text-shadow: 5px 5px 20px white, 0 0 25px white, 0 0 50px white;
+}
+.next{
+    border: 1px solid white;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    cursor: pointer;
+    font-size: large;
+    color: rgb(92, 140, 170);
+}
+.next:hover{
+    color: white;
+    text-shadow: 5px 5px 20px white, 0 0 25px white, 0 0 50px white;
+}
+.inner32{
+    width: 70%;
+    margin: auto;
+    border: 1px solid;
+   text-align: center;
+    font-size: 2em;
+    padding-bottom: 1.5em;
+}
+.inner32 p{
+    width: 80%;
+    margin: auto;
+    font-size: large;
+   
+}
+
+.inner32 div{
+    display: flex;
+    width: 70%;
+    font-size: large;
+    margin: auto;
+}
+.n321{
+    font-size: 2em;
+   
+    width: 10%;
+}
+.n322{
+    width: 90%;
+    text-align: start;
+}
+.inner33{
+    width: 66%;
+    margin: auto;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+.inner33 img{
+    height: 11em;
+    cursor: pointer;
+}

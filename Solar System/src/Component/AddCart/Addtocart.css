@@ -1,0 +1,87 @@
+.shopcart h1{
+     font-family: sans-serif;
+
+}   
+.shopcart{
+    padding: 3%;
+    padding-top: 0%;
+}
+.delicr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 6em;
+
+}
+
+.delicr input{
+    width: 2em;
+    height: 2em;
+}
+.delicr img{
+    border: 1px solid;
+    padding: 3px;
+    margin: 0%;
+}
+.delicr span{
+    border: 1px solid;
+    font-size: 1.6em;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.contc1{
+    padding: 1%;
+    display: flex;
+    font-family: sans-serif;
+    
+}
+.itemimg{
+    height: 10em;
+}
+.innercontc1{
+    width: 100%;
+    display: flex;  
+}
+.innercontc1 div{
+    padding-right: 3%;
+}
+.checkoutcart div{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.checkoutcart{
+    padding: 3%;
+    width: 25%;
+    border: 1px solid;
+    font-family: sans-serif;
+    height: 20em;
+    margin-left: 3%
+}
+.redeem2 {
+    padding: 1%;
+}
+.checkoutbtn{
+    font-family: sans-serif;
+    background-color: red;
+    color: white;
+    padding: 3%;
+  cursor: pointer;
+}
+.checkoutbtn b{
+    margin: auto;
+}
+.inner2scart{
+    display: flex;
+}
+.innershopcart{
+    width: 57%;
+}
+.deletebtn{
+    cursor: pointer;
+}
+.increamentbtn{
+    cursor: pointer;
+}

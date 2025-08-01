@@ -1,0 +1,140 @@
+.bodynavbar{
+    display: flex;
+    justify-content: space-between;
+<<<<<<< HEAD
+    align-items: center;
+=======
+>>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
+    padding: 1%;
+    background-color: rgb(3, 59, 94);
+    color: white;
+}
+.ncontainer1{
+  display: flex;
+  justify-content: space-between;
+  width: 47%;
+}
+.ncontainer1 div {
+    display: flex;
+<<<<<<< HEAD
+    justify-content: center;
+    align-items: center;
+=======
+>>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
+    cursor: pointer;
+
+}
+.ncontainer1 div a{
+    padding-left: 1em;
+    text-decoration: none;
+    color: white;
+}
+.ncontainer1 div img{
+    height: 1.3em;
+    margin-top: -2px;
+    padding-right: 0.3em;
+}
+.ncontainer{
+    cursor: pointer;
+}
+.ncontainer:hover{
+    text-decoration: underline;
+}
+.emaildivacco{
+    display: flex;
+    justify-content: space-between;
+<<<<<<< HEAD
+    
+=======
+    width: 14em;
+>>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
+    align-items: center;
+    align-content: center;
+    border: 1px solid;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+.logoutemail{
+    cursor: pointer;
+<<<<<<< HEAD
+   background-color: rgb(2, 47, 75);
+    padding: 0.7em;
+    margin-left: 1em;
+    border-radius: 10%;
+=======
+>>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
+}
+.logoutemail:hover{
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .bodynavbar {
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .ncontainer1 {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ncontainer1 div {
+        justify-content: center;
+    }
+
+    .emaildivacco {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ncontainer1 div a {
+        font-size: 14px;
+    }
+
+    .emaildivacco {
+        font-size: 14px;
+        padding: 0.3em;
+    }
+}
+
+
+/* // ... existing code ... */
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .bodynavbar {
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .ncontainer1 {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ncontainer1 div {
+        justify-content: center;
+    }
+
+    .emaildivacco {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ncontainer1 div a {
+        font-size: 14px;
+    }
+
+    .emaildivacco {
+        font-size: 14px;
+        padding: 0.3em;
+    }
+}
