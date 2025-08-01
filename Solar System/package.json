@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@react-oauth/google": "^0.12.2",
     "axios": "^1.11.0",
     "cloudflare": "^3.5.0",
@@ -19,13 +18,6 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2",
     "react-toastify": "^11.0.5"
-=======
-    "axios": "^1.7.7",
-    "cloudflare": "^3.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2"
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

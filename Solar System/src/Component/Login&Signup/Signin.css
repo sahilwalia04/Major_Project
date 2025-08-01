@@ -166,11 +166,7 @@
 }
 
 .bodysign .foot {
-<<<<<<< HEAD
   top: 570px;
-=======
-  top: 490px;
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
   left: -80px;
   position: absolute;
   background: #000;
@@ -246,11 +242,7 @@
   max-width: 400px;
   padding: 20px 40px;
   background: #fff;
-<<<<<<< HEAD
   height: 470px;
-=======
-  height: 430px;
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
   margin: auto;
   display: block;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
@@ -454,7 +446,6 @@
 }
 .btnlogin:hover{
   scale: 1.3;
-<<<<<<< HEAD
 }
 
 
@@ -566,6 +557,3 @@
 .google-btn span {
   font-size: 14px;
 }
-=======
-}
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916

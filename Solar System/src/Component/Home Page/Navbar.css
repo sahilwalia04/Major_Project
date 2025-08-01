@@ -1,10 +1,7 @@
 .bodynavbar{
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
     align-items: center;
-=======
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
     padding: 1%;
     background-color: rgb(3, 59, 94);
     color: white;
@@ -16,11 +13,8 @@
 }
 .ncontainer1 div {
     display: flex;
-<<<<<<< HEAD
     justify-content: center;
     align-items: center;
-=======
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
     cursor: pointer;
 
 }
@@ -43,11 +37,7 @@
 .emaildivacco{
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
     
-=======
-    width: 14em;
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
     align-items: center;
     align-content: center;
     border: 1px solid;
@@ -56,13 +46,10 @@
 }
 .logoutemail{
     cursor: pointer;
-<<<<<<< HEAD
    background-color: rgb(2, 47, 75);
     padding: 0.7em;
     margin-left: 1em;
     border-radius: 10%;
-=======
->>>>>>> 4cdad99aa030d0ab8c1c919b9fcdd804d2365916
 }
 .logoutemail:hover{
     text-decoration: underline;
