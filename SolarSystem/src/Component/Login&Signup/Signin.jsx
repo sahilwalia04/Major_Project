@@ -45,7 +45,7 @@ function Register() {
     setIsSubmitting(true);
 
      try{
-       const response = await  axios.post("http://13.49.73.215:5000/users/signin",{
+       const response = await  axios.post("http://shivamwallu.site:5000/users/signin",{
             username:username,
             email:email,
             password:password
@@ -125,7 +125,40 @@ function Register() {
       toast.error("Wrong OTP")
     }
   }
+
   
+  
+  
+
+  // Google Authencation 
+
+
+  
+
+
+   const handleLoginSuccess = async (authResult) => {
+    try {
+      console.log("Login successful:", authResult);
+      if (authResult["code"]) {    
+        const response = await googleAuth(authResult.code);
+        console.log("User Info:", response.data.user.user); 
+        localStorage.setItem("user", JSON.stringify(response.data.user.user))
+        navigate("/"); 
+      }
+
+
+    } catch (error) {
+      console.error("Login failed:", error);
+    }
+  };
+
+   const loginWithGoogle = useGoogleLogin({
+    onSuccess: handleLoginSuccess,
+    onError: handleLoginSuccess,
+    flow: 'auth-code',
+  });
+
+
   if(otp){
     return (
          <div className="otp-container">
@@ -151,33 +184,9 @@ function Register() {
         </form>
       </div>
     </div>
-    )
+    );
    }
-
-  // Google Authencation 
-
-   const handleLoginSuccess = async (authResult) => {
-    try {
-      console.log("Login successful:", authResult);
-      if (authResult["code"]) {    
-        const response = await googleAuth(authResult.code);
-        console.log("User Info:", response.data.user.user); 
-        localStorage.setItem("user", JSON.stringify(response.data.user.user))
-        navigate("/"); 
-      }
-
-
-    } catch (error) {
-      console.error("Login failed:", error);
-    }
-  };
-
-   const loginWithGoogle = useGoogleLogin({
-    onSuccess: handleLoginSuccess,
-    onError: handleLoginSuccess,
-    flow: 'auth-code',
-  });
-
+   
   return (
     <div className='bodysign'>
       <Navbar />

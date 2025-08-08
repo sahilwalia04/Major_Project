@@ -69,7 +69,7 @@ function Address() {
         setError(null);
 
         try {
-            const response = await axios.post('http://13.49.73.215:5000/create-order', data);
+            const response = await axios.post('http://shivamwallu.site:5000/create-order', data);
             window.location.href = response.data.url;
         } catch (error) {
             setError("Payment failed. Please try again.");

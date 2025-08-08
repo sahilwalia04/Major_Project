@@ -37,6 +37,6 @@ const googleuserSchema = new mongoose.Schema({
     },
 
 })
-const usrModel = mongoose.model('user' , userSchema);
+const userModel = mongoose.model('user' , userSchema);
 const googleUserModel = mongoose.model('googleuser', googleuserSchema);
-module.exports = {usrModel, googleUserModel};
+module.exports = {userModel, googleUserModel};

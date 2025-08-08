@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://13.49.73.215:5000/users", 
+  baseURL: "http://shivamwallu.site:5000/users", 
   withCredentials: true, 
 });
 

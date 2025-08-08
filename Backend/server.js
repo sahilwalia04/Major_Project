@@ -8,11 +8,11 @@ const CookiePaser = require("cookie-parser");
 const router2 = require('./Routes/apiroutes');
 const router3 = require('./Routes/paymentroutes');
 doenv.config();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors({
-    origin: 'http:13.49.73.215:5173',
+    origin: ['http://13.49.73.215:5173' ,'http://shivamwallu.site','http://13.49.73.215','http://localhost:5173' ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
@@ -36,3 +36,5 @@ app.use((err , req , res , next)=>{
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT || 5000}`);
 })
+
+
