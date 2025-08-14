@@ -1,127 +1,151 @@
-.bodynavbar{
+.bodynavbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1%;
     background-color: rgb(3, 59, 94);
     color: white;
+    flex-wrap: wrap;
 }
-.ncontainer1{
-  display: flex;
-  justify-content: space-between;
-  width: 47%;
+
+.ncontainer1 {
+    display: flex;
+    justify-content: space-between;
+    width: 47%;
+    flex-wrap: wrap;
 }
+
 .ncontainer1 div {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
+    margin: 0.2em 0;
 }
-.ncontainer1 div a{
-    padding-left: 1em;
+
+.ncontainer1 div a {
+    padding-left: 0.5em;
     text-decoration: none;
     color: white;
 }
-.ncontainer1 div img{
+
+.ncontainer1 div img {
     height: 1.3em;
     margin-top: -2px;
     padding-right: 0.3em;
 }
-.ncontainer{
+
+.ncontainer {
     cursor: pointer;
+    padding: 0.5em;
 }
-.ncontainer:hover{
+
+.ncontainer:hover {
     text-decoration: underline;
 }
-.emaildivacco{
+
+.emaildivacco {
     display: flex;
     justify-content: space-between;
-    
     align-items: center;
-    align-content: center;
     border: 1px solid;
     padding: 0.5em;
     border-radius: 10px;
+    margin: 0.5em;
+    flex-wrap: wrap;
 }
-.logoutemail{
+
+.logoutemail {
     cursor: pointer;
-   background-color: rgb(2, 47, 75);
-    padding: 0.7em;
-    margin-left: 1em;
-    border-radius: 10%;
+    background-color: rgb(2, 47, 75);
+    padding: 0.5em;
+    margin-left: 0.5em;
+    border-radius: 5px;
 }
-.logoutemail:hover{
+
+.logoutemail:hover {
     text-decoration: underline;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .bodynavbar {
-        flex-direction: column;
+        flex-direction: row;
         padding: 2%;
+        justify-content: space-around;
     }
 
     .ncontainer1 {
-        width: 100%;
-        flex-direction: column;
-        gap: 10px;
+        width: 70%;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: flex-start;
     }
 
     .ncontainer1 div {
-        justify-content: center;
+        margin: 0.2em;
+        font-size: 0.9em;
+    }
+
+    .ncontainer1 div a {
+        display: none; /* Hide text on smaller screens */
+    }
+
+    .ncontainer1 div img {
+        height: 1.5em;
+        padding-right: 0;
     }
 
     .emaildivacco {
-        width: 90%;
-        margin: 10px auto;
+        width: auto;
+        margin: 0;
+        padding: 0.3em;
+        font-size: 0.9em;
+    }
+
+    .emaildivacco span {
+        display: none; /* Hide email on smaller screens */
     }
 }
 
 @media screen and (max-width: 480px) {
-    .ncontainer1 div a {
-        font-size: 14px;
-    }
-
-    .emaildivacco {
-        font-size: 14px;
-        padding: 0.3em;
-    }
-}
-
-
-/* // ... existing code ... */
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
     .bodynavbar {
-        flex-direction: column;
-        padding: 2%;
+        justify-content: space-between;
+        padding: 1%;
     }
 
     .ncontainer1 {
-        width: 100%;
-        flex-direction: column;
-        gap: 10px;
+        width: 60%;
+        gap: 3px;
     }
 
     .ncontainer1 div {
-        justify-content: center;
+        font-size: 0; /* Hide text completely */
+    }
+
+    .ncontainer1 div img {
+        height: 1.3em;
+        margin: 0 3px;
     }
 
     .emaildivacco {
-        width: 90%;
-        margin: 10px auto;
+        font-size: 0.8em;
+        padding: 0.2em;
+    }
+
+    .logoutemail {
+        padding: 0.3em;
+        font-size: 0.8em;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .ncontainer1 div a {
-        font-size: 14px;
+/* For very small screens */
+@media screen and (max-width: 320px) {
+    .ncontainer1 {
+        width: 55%;
     }
 
-    .emaildivacco {
-        font-size: 14px;
-        padding: 0.3em;
+    .ncontainer1 div img {
+        height: 1.1em;
     }
 }

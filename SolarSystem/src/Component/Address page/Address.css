@@ -3,24 +3,36 @@
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+
+    /* Center the child container */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* top align */
+    min-height: 100vh; /* ensure it takes full height */
 }
+
+
 .bodyaddress .container {
-    width: 400px;
+    max-width: 400px; /* Limit for desktops */
+    width: 100%; /* Full width for small screens */
     margin: 20px auto;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 50px;
+    padding: 30px;
+    box-sizing: border-box;
 }
+
 .bodyaddress .back-link {
     color: #d32f2f;
     text-decoration: none;
     font-size: 14px;
     cursor: pointer;
 }
-.back-link:hover{
+.back-link:hover {
     text-decoration: underline;
 }
+
 .bodyaddress .section-title {
     display: flex;
     align-items: center;
@@ -32,70 +44,56 @@
     color: #d32f2f;
     margin-right: 10px;
 }
+
 .bodyaddress .form-group {
     margin-bottom: 15px;
 }
+
 .bodyaddress .form-group label {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
 }
-.bodyaddress .form-group input, .form-group select {
-    width: 95%;
+
+.bodyaddress .form-group input,
+.bodyaddress .form-group select {
+    width: 100%;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    box-sizing: border-box;
 }
+
 .bodyaddress .form-group input[type="radio"] {
     width: auto;
     margin-right: 10px;
 }
+
 .bodyaddress .form-group .info-icon {
     color: #d32f2f;
     margin-left: 5px;
 }
-.bodyaddress .shipping-method {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
-}
-.bodyaddress .shipping-method label {
+
+.gender {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    margin-bottom: 5px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-.bodyaddress .shipping-method .price {
-    font-weight: bold;
-}
-.bodyaddress .shipping-method input[type="radio"] {
-    margin-right: 10px;
-}
-.bodyaddress .shipping-method .details {
-    font-size: 12px;
-    color: #666;
-}
-.bodyaddress .shipping-method.selected {
-    border-color: #d32f2f;
-}
-.bodyaddress .gift-wrap {
+
+.gender div {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
 }
-.bodyaddress .gift-wrap input[type="checkbox"] {
-    margin-right: 10px;
+
+.gender div .btn {
+    margin-top: -0.5em;
 }
-.bodyaddress .gift-wrap .price {
-    font-weight: bold;
-}
+
 .bodyaddress .continue-btn {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #d32f2f;
     color: #fff;
     font-size: 16px;
@@ -105,18 +103,30 @@
     border-radius: 5px;
     cursor: pointer;
 }
-.gender{
-    display: flex;
-    
-}
-.gender div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-right: 2em;
-}
-.gender div .btn{
-    margin-top: -0.5em;
+
+.bodyaddress .continue-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .bodyaddress .container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .bodyaddress .section-title {
+        font-size: 16px;
+    }
+
+    .gender {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .bodyaddress .continue-btn {
+        font-size: 15px;
+        padding: 10px;
+    }
+}

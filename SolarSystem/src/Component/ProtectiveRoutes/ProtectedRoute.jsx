@@ -15,7 +15,7 @@ function ProtectedRoute() {
         console.log(response.data.success);
         if(response.data.success){
           setisAuthentivated(true)
-          setLoading(false)
+          setLoading(false)   
         }
       }catch(e){
         console.log(e);

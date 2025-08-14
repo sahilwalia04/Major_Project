@@ -2,150 +2,147 @@
     margin: 0;
  }
  
- .firstnav {
-     background-color: red;
-     padding: 0.7%;
-     font-family: sans-serif;
- }
- 
- .firstnav p {
+.firstnav {
+    background-color: red;
+    padding: 0.7%;
+    font-family: sans-serif;
+}
+
+.firstnav p {
     text-align: center;
     margin: 0;
     color: white;
- }
- 
- .firstnav div {
-     font-size: 2em;
-     text-align: end;
-     color: white;
-     margin-top: -2%;
-     margin-right: 0.4em;
-     cursor: pointer;
- }
- 
- .secondnav {
-     background-color: rgb(43, 38, 38);
-     color: white;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 1%;
-     font-size: 1.5em;
-     font-family: sans-serif;
-     padding-left: 1em;
- }
- 
- .secondnav div img {
-     height: 1.4em;
- }
- 
- .imgss {
-     display: flex;
-     width: 8%;
-     justify-content: space-around;
- }
- 
- .thirdnav {
-     display: flex;
-     background-color: rgb(43, 38, 38);
-     color: white;
-     font-family: sans-serif;
-     padding: 1%;
- }
- 
- .thirdnav div {
-     padding-right: 1em;
-     font-size: large;
-     display: block;
-     cursor: pointer;
- }
- 
- .thirdnav div img {
-     height: 1em;
-     margin-left: 0.4em;
- }
- 
- .lastnav {
-     background-color: rgb(43, 38, 38);
-     color: white;
- }
- 
- .lastnav div {
-     display: flex;
-     width: 28%;
-     margin: auto;
-     justify-content: center;
-     align-content: center;
-     align-items: center;
- }
- 
- .redeem {
-     border: 1px solid white;
-     padding: 0.5em 1em;
-     margin-left: 3%;
-     cursor: pointer;
-     transition: background-color 0.3s ease, color 0.3s ease;
- }
- 
- .redeem:hover {
-     background-color: white;
-     color: black;
- }
- 
- .md {
-     margin-left: 0.6em;
- }
- 
+    font-size: clamp(12px, 2vw, 16px);
+}
 
+.firstnav div {
+    font-size: 1.5em;
+    text-align: end;
+    color: white;
+    margin-top: -2%;
+    margin-right: 0.4em;
+    cursor: pointer;
+}
 
- 
- .dropdown31 {
-     display: none;
-     position: absolute;
-     background-color:  rgb(43, 38, 38);;
-     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-     padding: 10px;
-     z-index: 1;
-     border-radius: 4px;
-     transition: all 0.3s ease;
-     margin-top: 1em;
- }
- 
- .innernav32:hover .dropdown31 {
-     display: block;
- }
- 
- .innernav32 {
-     position: relative;
-     cursor: pointer;
- }
- 
- .dropdown31 div {
-     padding: 5px 10px;
-     cursor: pointer;
- }
- 
- .dropdown31 div:hover {
-     background-color: rgba(166, 154, 154, 0.05);
- }
- 
- .dropdown31 {
-     opacity: 0;
-     visibility: hidden;
-     transform: translateY(-10px);
-     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
- }
- 
- .innernav32:hover .dropdown31 {
-     opacity: 1;
-     visibility: visible;
-     transform: translateY(0);
- }
- 
+.secondnav {
+    background-color: rgb(43, 38, 38);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    font-size: clamp(14px, 3vw, 1.5em);
+    font-family: sans-serif;
+    padding-left: 1em;
+}
 
+.secondnav div img {
+    height: 1.4em;
+}
 
+.imgss {
+    display: flex;
+    width: 8%;
+    justify-content: space-around;
+}
 
- .dropdown32 {
+.thirdnav {
+    display: flex;
+    background-color: rgb(43, 38, 38);
+    color: white;
+    font-family: sans-serif;
+    padding: 1%;
+    flex-wrap: wrap;
+}
+
+.thirdnav div {
+    padding-right: 1em;
+    font-size: large;
+    display: block;
+    cursor: pointer;
+}
+
+.thirdnav div img {
+    height: 1em;
+    margin-left: 0.4em;
+}
+
+.lastnav {
+    background-color: rgb(43, 38, 38);
+    color: white;
+}
+
+.lastnav div {
+    display: flex;
+    width: 28%;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.redeem {
+    border: 1px solid white;
+    padding: 0.5em 1em;
+    margin-left: 3%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.redeem:hover {
+    background-color: white;
+    color: black;
+}
+
+.md {
+    margin-left: 0.6em;
+}
+
+.dropdown31 {
+    display: none;
+    position: absolute;
+    background-color:  rgb(43, 38, 38);;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-top: 1em;
+}
+
+.innernav32:hover .dropdown31 {
+    display: block;
+}
+
+.innernav32 {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown31 div {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown31 div:hover {
+    background-color: rgba(166, 154, 154, 0.05);
+}
+
+.dropdown31 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.innernav32:hover .dropdown31 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown32 {
     display: none;
     position: absolute;
     background-color:  rgb(43, 38, 38);;
@@ -189,9 +186,6 @@
     transform: translateY(0);
 }
 
-
-
-
 .dropdown33 {
     display: none;
     position: absolute;
@@ -220,10 +214,9 @@
 }
 
 .dropdown33 div:hover {
-    background-color: rgba(166, 154, 154, 0.05); /* Lighter hover state */
+    background-color: rgba(166, 154, 154, 0.05);
 }
 
-/* Optional: Style for smooth dropdown transition */
 .dropdown33 {
     opacity: 0;
     visibility: hidden;
@@ -236,9 +229,6 @@
     visibility: visible;
     transform: translateY(0);
 }
-
-
-
 
 .dropdown34 {
     display: none;
@@ -284,10 +274,6 @@
     transform: translateY(0);
 }
 
-
-
-
-
 .dropdown35 {
     display: none;
     position: absolute;
@@ -332,9 +318,6 @@
     transform: translateY(0);
 }
 
-
-
-
 .dropdown36 {
     display: none;
     position: absolute;
@@ -378,15 +361,15 @@
     visibility: visible;
     transform: translateY(0);
 }
+
 .shopbtn{
     cursor: pointer;
 }
 
-
 .shopbtn-container {
     position: relative;
     display: inline-block;
-  }
+}
   
 .product-badge {
     position: absolute;
@@ -403,5 +386,73 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  }
-  
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .imgss {
+        width: 20%;
+    }
+    
+    .thirdnav {
+        display: none;
+    }
+    
+    .lastnav div {
+        width: 90%;
+        padding: 10px 0;
+    }
+    
+    .mobile-menu-icon {
+        font-size: 1.5em;
+        cursor: pointer;
+        padding: 0 10px;
+    }
+    
+    .mobile-menu {
+        background-color: rgb(43, 38, 38);
+        color: white;
+        padding: 10px;
+    }
+    
+    .mobile-menu-item {
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+    }
+    
+    .mobile-dropdown {
+        padding-left: 20px;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .mobile-dropdown div {
+        padding: 8px 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .mobile-search-cart {
+        display: flex;
+        justify-content: space-around;
+        padding: 15px 0;
+    }
+    
+    .secondnav {
+        font-size: clamp(14px, 5vw, 1.2em);
+    }
+}
+
+@media (max-width: 480px) {
+    .firstnav p {
+        padding-right: 20px;
+    }
+    
+    .lastnav div p {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    
+    .redeem {
+        padding: 0.3em 0.8em;
+    }
+}

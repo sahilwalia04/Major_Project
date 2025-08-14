@@ -1,6 +1,8 @@
 .p1container{
-    display: flex;
+   
      background-color: #f5f5f5;
+     width: 100%;
+   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 .p1container .container {
     width: 300px;
@@ -152,7 +154,117 @@
 .p1head{
     margin: 1%;
     font-family: sans-serif;
+} 
+
+
+
+
+
+
+ /* Existing styles remain the same until the media queries */
+
+/* Mobile-first responsive styles */
+.p1container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
 }
 
+.filter-sidebar {
+  width: 100%;
+  order: -1; /* Move filters above products on mobile */
+  display: none; /* Hidden by default on mobile */
+}
 
+.filter-sidebar.show {
+  display: block; /* Show when toggled */
+}
 
+.mobile-filter-toggle {
+  display: none; /* Hidden by default on desktop */
+  padding: 10px 15px;
+  background-color: #222;
+  color: white;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.p1items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  justify-items: center; /* This centers the items in their grid cells */
+}
+.p1item {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  cursor: pointer;
+  text-align: center;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.p1item:hover {
+  transform: scale(1.02);
+}
+
+.p1item img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .p1container {
+    flex-direction: row;
+  }
+  
+  .filter-sidebar {
+    width: 300px;
+    display: block;
+    margin: 4%;
+  }
+  
+  .p1apidiv {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+  
+  .mobile-filter-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .p1items {
+    grid-template-columns: 1fr;
+    max-width: 300px; /* Or whatever max width you prefer */
+    margin: 0 auto; /* This centers the grid container itself */
+  }
+  
+  .p1item {
+    width: 100%;
+    max-width: 250px; /* Adjust as needed */
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 481px) and (max-width: 767px) {
+  .p1items {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px; /* Adjust based on your preferred max width */
+    margin: 0 auto;
+  }
+  
+  .p1item {
+    width: 100%;
+    max-width: 250px;
+    justify-self: center; /* Centers each item in its grid cell */
+  }
+}

@@ -1,31 +1,93 @@
-.SFbody{
+.SFbody {
     background-color: #222229;   
-     padding: 2%;
+    padding: 2%;
     color: white;
 }
-.sf1{
+
+.sf1 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    font-family: sans-serif
+    font-family: sans-serif;
+    gap: 20px;
 }
-.sf1 a{
+
+.footer-column {
+    flex: 1 1 150px; /* Flex grow, flex shrink, flex basis */
+    margin-bottom: 20px;
+    min-width: 150px;
+}
+
+.contact-column {
+    min-width: 200px;
+}
+
+.sf1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 1.4;
+}
+
+.sf1 a:hover {
+    text-decoration: underline;
+}
+
+.sf3 a {
     color: white;
     text-decoration: none;
 }
-.sf1 a:hover{
+
+.sf3 a:hover {
     text-decoration: underline;
 }
-.sf3 a{
-    color: white;
-    text-decoration: none;
-   
-}
-.sf3 a:hover{
-    text-decoration: underline;
-}
-.sf3{
+
+.sf3 {
     text-align: center;
+    margin-top: 20px;
 }
-.sf2 img{
+
+.sf2 img {
     width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .sf1 {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-column {
+        flex: 1 1 100%;
+        margin-bottom: 15px;
+    }
+    
+    .sf1 a {
+        font-size: 16px;
+    }
+    
+    .sf3 a {
+        font-size: 16px;
+        display: block;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .SFbody {
+        padding: 5%;
+    }
+    
+    .sf1 a {
+        font-size: 14px;
+    }
+    
+    .contact-column a {
+        word-break: break-all;
+    }
 }

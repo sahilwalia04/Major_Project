@@ -4,110 +4,153 @@
     background-color: #000;
     color: #fff;
     font-family: Arial, sans-serif;
+    width: 100%;
 }
-.bodyfoot .footer {
+
+.footer {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 2em 1em;
     background-color: #000;
     border-top: 1px solid #333;
+    gap: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.bodyfoot .footer div {
+
+.footer div {
     text-align: center;
+    width: 100%;
 }
-.bodyfoot .footer h3 {
+
+.footer h3 {
     color: #00ffff;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 1em;
 }
-.bodyfoot .footer p, .footer a {
+
+.footer p, .footer a {
     color: #fff;
-    font-size: 14px;
+    font-size: 0.9rem;
     text-decoration: none;
+    line-height: 1.6;
 }
+
 .footer a:hover {
+    color: #00ffff;
     text-decoration: underline;
 }
-.bodyfoot .footer .social-icons a {
-    width: 40px;
-    height: 40px;
-    margin: 0 5px;
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.social-icons a {
+    width: 2.5em;
+    height: 2.5em;
     background-color: #003366;
     color: #fff;
-    border-radius: 5px;
-    font-size: 20px;
-    justify-content: center;
-    
-}
-.social-icons a i{
-    margin-top: 0.5em;
-}
-.bodyfoot .footer .social-icons a:hover {
-    background-color: #00ffff;
-}
-.bodyfoot .footer .logo img {
-    width: 100px;
-}
-.bodyfoot .footer .logo p {
-    margin-top: 10px;
-}
-.bodyfoot .footer .popular-links ul {
-    list-style: disc;
-    padding: 0;
-    text-align: start;
-}
-.bodyfoot .footer .popular-links ul li {
-    margin: 5px;
-}
-.lastfoot{
-    text-align: center;
-}
-.youtubl{
-    margin-top: 7em;
-}
-.social-icons{
+    border-radius: 50%;
     display: flex;
-    
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
 
+.social-icons a:hover {
+    background-color: #00ffff;
+    transform: translateY(-3px);
+}
+
+.footer .logo img {
+    width: 6em;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+.popular-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popular-links ul li {
+    margin: 0.8em 0;
+    position: relative;
+    padding-left: 1.2em;
+}
+
+.popular-links ul li:before {
+    content: "•";
+    color: #00ffff;
+    position: absolute;
+    left: 0;
+}
+
+.lastfoot {
+    text-align: center;
+    padding: 1em;
+    font-size: 0.8rem;
+    color: #aaa;
+    border-top: 1px solid #333;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-    .bodyfoot .footer {
-        flex-direction: column;
-        gap: 30px;
-        padding: 30px 20px;
+@media screen and (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 3em 2em;
+        gap: 1em;
     }
 
-    .bodyfoot .footer div {
-        width: 100%;
+    .footer div {
+        width: 30%;
+        text-align: left;
+    }
+
+    .footer .logo {
+        text-align: center;
     }
 
     .social-icons {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
-    .youtubl {
-        margin-top: 3em;
-    }
-
-    .bodyfoot .footer .popular-links ul {
-        text-align: center;
+    .popular-links ul {
+        text-align: left;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .bodyfoot .footer h3 {
-        font-size: 16px;
+@media screen and (min-width: 1024px) {
+    .footer {
+        padding: 4em 2em;
     }
 
-    .bodyfoot .footer p, .footer a {
-        font-size: 12px;
+    .footer h3 {
+        font-size: 1.3rem;
     }
 
-    .bodyfoot .footer .social-icons a {
-        width: 35px;
-        height: 35px;
+    .footer p, .footer a {
+        font-size: 1rem;
+    }
+}
+
+/* Accessibility improvements */
+.social-icons a:focus,
+.footer a:focus {
+    outline: 2px solid #00ffff;
+    outline-offset: 2px;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion) {
+    .social-icons a:hover {
+        transform: none;
     }
 }

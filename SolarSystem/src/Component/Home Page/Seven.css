@@ -1,59 +1,203 @@
-.bodyseven{
+.bodyseven {
     background-image: url("../images/moon place.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10%;
-    padding-top: 0%;
-}
-.cont71{
-    width: 93%;
-    margin: auto;
-    display: flex;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 1em;
     color: white;
-    border: 1px solid  rgb(98, 169, 213);
-    padding: 2%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Changed from center to space-between */
 }
-.inner71{
-    width: 50%;
+
+.cont71 {
+    width: 95%;
+    max-width: 1200px;
+    margin: 2em auto; /* Increased vertical margin */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(98, 169, 213, 0.7);
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    flex-grow: 1; /* Allows container to grow and center content */
+    justify-content: center; /* Center content vertically within container */
+}
+
+.inner71 {
+    width: 100%;
     font-family: sans-serif;
     display: flex;
-
+    flex-direction: column;
+    margin-bottom: 1em;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
 }
-.inner71 div{
+
+.inner71 div {
+    width: 100%;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content in the div */
+}
+
+.inner71 div img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1em;
+    border-radius: 5px;
+}
+
+.inner71 div p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.inner71 h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 0.5em 0;
+}
+
+.inner72 {
+    width: 100%;
+    display: flex;
     justify-content: center;
-    align-content: center;
-    align-items: center;
-    width: 50%;
-    
-}
-.inner71 div img{
-    height: 7em;
-}
-.inner71 div p{
-    font-size: large;
-}
-.inner71 h1{
-    font-size: 3em;
-    padding-top: 0%;
-    margin-top: 0%;
 }
 
-.inner72 img{
-      height: 20em;
+.inner72 img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 5px;
 }
-.buttomnav{
+
+.buttomnav {
     display: flex;
-    width: 75%;
-    margin: auto;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto 1em; /* Reduced top margin */
     color: white;
-    font-size: 1.5em;
+    font-size: 1rem;
     font-family: sans-serif;
-    padding: 5%;
+    padding: 0.5em;
+    gap: 0.5em;
 }
+
+
 .buttomnav div {
     cursor: pointer;
+    padding: 0.5em 1em;
+    transition: all 0.3s ease;
+    border-radius: 4px;
 }
-.buttomnav div:hover{
-    text-shadow: 5px 5px 20px white, 0 0 25px white, 0 0 50px white;
+
+.buttomnav div:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
+
+
+
+@media screen and (max-width: 480px) {
+    .inner71 div img {
+        max-width: 150px; /* Smaller image for very small screens */
+    }
+    
+    .inner71 h1 {
+        font-size: 1.8rem; /* Slightly smaller heading */
+    }
+    
+    .buttomnav {
+        gap: 0.5em; /* Reduced gap between nav items */
+        padding: 0.5em;
+    }
+    
+    .buttomnav div {
+        padding: 0.3em 0.6em; /* Smaller padding for nav items */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+}
+
+
+/* Improved mobile styles */
+@media screen and (max-width: 767px) {
+    .bodyseven {
+        padding: 0.5em;
+    }
+    
+    .cont71 {
+        margin: 1em auto;
+        padding: 1em 0.5em;
+    }
+    
+    .inner71 {
+        margin-bottom: 0.5em;
+    }
+    
+    .inner71 div img {
+        max-width: 150px;
+        margin-bottom: 0.5em;
+    }
+    
+    .inner71 h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.3em;
+    }
+    
+    .inner71 div p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin: 0.5em 0;
+    }
+    
+    .buttomnav {
+        padding: 0.5em;
+        gap: 0.3em;
+    }
+    
+    .buttomnav div {
+        padding: 0.3em 0.5em;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .inner71 h1 {
+        font-size: 3rem;
+    }
+
+    .inner71 div p {
+        font-size: 1.2rem;
+    }
+
+    .buttomnav {
+        font-size: 1.2rem;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .cont71 {
+        padding: 1em;
+    }
+    
+    .inner71 {
+        flex-direction: row;
+    }
+    
+    .inner71 div {
+        width: 50%;
+    }
+}
+

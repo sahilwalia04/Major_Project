@@ -1,100 +1,171 @@
-.bodythird {
-    height: 75em;
-    background-image: url("../images/plannate.jpg"); /* Adjust the path as needed */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    background-size: cover;
-   color: white;
-   justify-content: center;
-   align-content: center;
-   align-items: center;
-   font-family: monospace;
-}
-.hrdiv{
+.hrdiv {
     height: 1.5em;
-    background-color:rgb(4, 50, 80) ;
-}
-.inner31{
-    margin: auto;
-    width: 55%;
-}
-.inner31 p{
-    font-size: 2.2em;
-   
-}
-.inner31 div{
-    display: flex;
-    justify-content: space-between;
-    font-size: large;
-
-}
-.like{
-    border: 1px solid white;
-   padding-left: 1em;
-   padding-right: 1em;
-   padding-top: 0.5em;
-   padding-bottom: 0.5em;
-   margin-right: 1em;
-   cursor: pointer;
-   font-size: large;
-   color: rgb(92, 140, 170);
-}
-.like:hover{
-    color: white;
-    text-shadow: 5px 5px 20px white, 0 0 25px white, 0 0 50px white;
-}
-.next{
-    border: 1px solid white;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    cursor: pointer;
-    font-size: large;
-    color: rgb(92, 140, 170);
-}
-.next:hover{
-    color: white;
-    text-shadow: 5px 5px 20px white, 0 0 25px white, 0 0 50px white;
-}
-.inner32{
-    width: 70%;
-    margin: auto;
-    border: 1px solid;
-   text-align: center;
-    font-size: 2em;
-    padding-bottom: 1.5em;
-}
-.inner32 p{
-    width: 80%;
-    margin: auto;
-    font-size: large;
-   
+    background-color: rgb(4, 50, 80);
 }
 
-.inner32 div{
-    display: flex;
-    width: 70%;
-    font-size: large;
+.bodythird {
+    min-height: 100vh;
+    background-image: url("../images/plannate.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: monospace;
+    padding: 2em 0;
+}
+
+.inner31 {
     margin: auto;
-}
-.n321{
-    font-size: 2em;
-   
-    width: 10%;
-}
-.n322{
     width: 90%;
-    text-align: start;
+    max-width: 800px;
+    padding: 1em;
 }
-.inner33{
-    width: 66%;
-    margin: auto;
-    border: 1px solid;
+
+.inner31 p {
+    font-size: 1.5em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+}
+
+.inner31 div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2%;
+    font-size: 1em;
+    gap: 1em;
 }
-.inner33 img{
-    height: 11em;
+
+.like, .next {
+    border: 1px solid white;
+    padding: 0.5em 1em;
     cursor: pointer;
+    color: rgb(92, 140, 170);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.like:hover, .next:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+.like img {
+    height: 1em;
+}
+
+.inner32 {
+    width: 90%;
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    text-align: center;
+}
+
+.inner32 h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+.inner32 p {
+    width: 100%;
+    margin: 0.5em auto;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.inner32 div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1em;
+    margin: 1em auto 0;
+    align-items: center;
+}
+
+.n321 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.n322 {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+}
+
+.inner33 {
+    width: 90%;
+    max-width: 800px;
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 1em;
+}
+
+.inner33 img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.inner33 img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+    .inner31 p {
+        font-size: 2em;
+    }
+
+    .inner31 div {
+        font-size: 1.2em;
+        flex-wrap: nowrap;
+    }
+
+    .inner32 {
+        font-size: 1.5em;
+    }
+
+    .inner32 div {
+        flex-direction: row;
+    }
+
+    .n321 {
+        width: 10%;
+    }
+
+    .n322 {
+        width: 90%;
+        text-align: start;
+    }
+
+    .inner33 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .inner31 p {
+        font-size: 1.2em;
+    }
+
+    .inner31 div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .like, .next {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .inner32 h1 {
+        font-size: 1.5em;
+    }
 }

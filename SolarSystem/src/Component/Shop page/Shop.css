@@ -1,5 +1,32 @@
-.bodyshop{
-   
-    width: 92%;
-    margin: auto;
+.bodyshop {
+  width: 100%;
+  max-width: 97%;
+  margin: auto;
+  padding: 0 4%;
+  box-sizing: border-box;
+}
+
+.content-wrapper {
+  padding: 20px 0;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .bodyshop {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+  .bodyshop {
+    padding: 0 10px;
+  }
+  
+  .content-wrapper {
+    padding: 10px 0;
+  }
 }

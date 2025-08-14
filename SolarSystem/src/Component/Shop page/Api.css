@@ -11,11 +11,12 @@
     font-family: sans-serif;
 }
 
-.items{
-   display: grid;
-   grid-template-columns: auto auto auto auto;
-   justify-content: space-between;
-   
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center; /* Center items horizontally */
+  gap: 20px;
+  width: 100%;
 }
 .item{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -28,72 +29,63 @@
     height: 19em;
 }
 
-
+.p1item {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-bottom: 12%;
+  cursor: pointer;
+  text-align: center;
+  font-family: sans-serif;
+  width: 100%; /* Ensure full width of grid cell */
+  max-width: 300px; /* Maximum width for each item */
+}
+.p1item img {
+  height: 19em;
+  width: 100%;
+  object-fit: cover;
+}
 
 
 
 /* Responsive Design */
 @media screen and (max-width: 1200px) {
-    .items {
-        grid-template-columns: auto auto auto;
-        gap: 20px;
-    }
+  .items {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .bodyapi {
-        padding: 3%;
-    }
+  .bodyapi {
+    padding: 3%;
+  }
 
-    .items {
-        grid-template-columns: auto auto;
-        gap: 15px;
-    }
+  .items {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
 
-    .apihome {
-        font-size: 1.2em;
-    }
+  .apihome {
+    font-size: 1.2em;
+  }
 
-    .item img {
-        height: 15em;
-    }
+  .p1item img {
+    height: 15em;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .items {
-        grid-template-columns: auto;
-    }
+  .items {
+    grid-template-columns: 1fr; /* Single column on smallest screens */
+    justify-items: center; /* Center the single column */
+    max-width: 90%; /* Prevent items from touching screen edges */
+    margin: 0 auto; /* Center the grid itself */
+  }
 
-    .item {
-        margin-bottom: 8%;
-    }
+  .p1item {
+    margin-bottom: 8%;
+    width: 100%;
+  }
 
-    .item img {
-        height: 18em;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .p1container .size {
-        width: 40px;
-        height: 25px;
-        font-size: 0.9em;
-    }
-
-    .p1container .colors div {
-        width: 15px;
-        height: 15px;
-    }
-
-    .colorapi {
-        font-size: 0.8em;
-    }
-
-    .sizeapi {
-        font-size: 0.7em;
-    }
-
-    .p1head h1 {
-        font-size: 1.2em;
-    }
+  .p1item img {
+    height: 18em;
+  }
 }
