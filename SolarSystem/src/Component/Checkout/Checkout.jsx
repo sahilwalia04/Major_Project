@@ -24,7 +24,7 @@ const Checkout = () => {
     setError(null);
 
     try {
-      const response = await axios.post('http://shivamwallu.site:5000/create-order', data);
+      const response = await axios.post('https://shivamwallu.site:5000/create-order', data);
       window.location.href = response.data.url;
     } catch (error) {
       setError("Payment failed. Please try again.");

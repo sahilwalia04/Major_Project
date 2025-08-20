@@ -17,28 +17,28 @@ function Product1Api() {
         let response;
         switch (selectedProduct?.id) {
           case 1:
-            response = await fetch('http://shivamwallu.site:5000/api/users/product1');
+            response = await fetch('https://shivamwallu.site:5000/api/users/product1');
             break;
           case 2:
-            response = await fetch('http://shivamwallu.site:5000/api/users/product2');
+            response = await fetch('https://shivamwallu.site:5000/api/users/product2');
             break;
           case 3:
-            response = await fetch('http://shivamwallu.site:5000/api/users/product3');
+            response = await fetch('https://shivamwallu.site:5000/api/users/product3');
             break;
           case 4:
-            response = await fetch('http://shivamwallu.site:5000/api/users/product4');
+            response = await fetch('https://shivamwallu.site:5000/api/users/product4');
             break;
           case 5:
-            response = await fetch('http://shivamwallu.site:5000/api/users/product5');
+            response = await fetch('https://shivamwallu.site:5000/api/users/product5');
             break;
           case 6:
-            response = await fetch('http://shivamwallu.site:5000/api/users/product6');
+            response = await fetch('https://shivamwallu.site:5000/api/users/product6');
             break;
           case 7:
-            response = await fetch('http://shivamwallu.site:5000/api/users/product7');
+            response = await fetch('https://shivamwallu.site:5000/api/users/product7');
             break;
           case 8:
-            response = await fetch('http://shivamwallu.site:5000/api/users/product8');
+            response = await fetch('https://shivamwallu.site:5000/api/users/product8');
             break;
           default:
             throw new Error('Invalid product ID');

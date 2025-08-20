@@ -45,11 +45,12 @@ function Register() {
     setIsSubmitting(true);
 
      try{
-       const response = await  axios.post("http://shivamwallu.site:5000/users/signin",{
+       const response = await  axios.post("https://shivamwallu.site:5000/users/signin",{
             username:username,
             email:email,
             password:password
-         })
+         },
+        { withCredentials: true});
         setMessage(response.message);
         // Optionally, redirect to login after successful registration
         localStorage.setItem("email",emailvalue.current.value);

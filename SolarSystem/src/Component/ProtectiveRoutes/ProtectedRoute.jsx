@@ -9,7 +9,7 @@ function ProtectedRoute() {
   useEffect(()=>{
     const checkAuth = async ()=>{
       try{
-        const response = await axios.get("http://shivamwallu.site:5000/users",{
+        const response = await axios.get("https://shivamwallu.site:5000/users",{
           withCredentials: true
         })
         console.log(response.data.success);

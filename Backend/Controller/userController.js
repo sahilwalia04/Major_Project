@@ -72,9 +72,9 @@ const login = async (req ,res) =>{
          await res.cookie("token" , token , {
             httpOnly: true,
             // maxAge:  30*60 * 1000, // 30 minutes
-            // secure: process.env.NODE_ENV === "production",
+            secure: process.env.NODE_ENV === "production",
             sameSite: "lax",
-            expires : new Date(Date.now() + 30*60*1000),// 30 minutes
+            expires : new Date(Date.now() + 60*60*1000),// 1 hours
         });
         
         
@@ -131,7 +131,7 @@ const googleLogin = async (req, res) => {
 
    await res.cookie('token', token, {
       httpOnly: true,
-      expires: new Date(Date.now() + 30 * 60 * 1000), // 30 minutes
+      expires: new Date(Date.now() + 60 * 60 * 1000), // 1 hour
     });
 
     return res.status(200).json({

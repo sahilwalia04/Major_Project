@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors({
-    origin: ['http://13.49.73.215:5173' ,'http://shivamwallu.site','http://13.49.73.215','http://localhost:5173' ],
+    origin: ['http://13.49.73.215:5173' ,'http://shivamwallu.site','http://13.49.73.215','http://localhost:5173','https://shivamwallu.site'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
