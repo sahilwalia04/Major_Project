@@ -100,57 +100,64 @@ const login = async (req ,res) =>{
 
 
 const googleLogin = async (req, res) => {
-  console.log("hello googlelogin");
-
   try {
+    const url = oauth2Client.generateAuthUrl({
+      access_type: "offline",
+      scope: ["profile", "email"],
+    });
+    return res.redirect(url);
+  } catch (err) {
+    console.error("Google Login Error:", err);
+    res.status(500).send("Login Failed");
+  }
+};
 
-    
-    const {code} = req.query;
-    console.log("code", code);
-    const googleRes = await oauth2Client.getToken(code);
-    console.log("googleRes", googleRes.tokens);
-    oauth2Client.setCredentials(googleRes.tokens);
-    const userRes =  await axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${googleRes.tokens.access_token}`);
-    const{email , name , picture} = userRes.data;
-    let user = await googleUserModel.findOne({ email: email });
+
+
+
+
+const googleCallback = async (req, res) => {
+  try {
+    const code = req.query.code;
+    const { tokens } = await oauth2Client.getToken(code);
+    oauth2Client.setCredentials(tokens);
+
+    const userRes = await axios.get(
+      `https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${tokens.access_token}`
+    );
+
+    const { email, name, picture } = userRes.data;
+
+    // Check user in DB
+    let user = await googleUserModel.findOne({ email });
     if (!user) {
       user = await googleUserModel.create({
         username: name,
-        email: email,
-        image: picture
+        email,
+        image: picture,
       });
-    } 
+    }
 
+    // Create JWT
     const token = jwt.sign(
       { id: user._id },
       process.env.JWT_SECRET_KEY,
-      { expiresIn: '1h' }
+      { expiresIn: "1h" }
     );
 
-    console.log("token", token);
-
-   await res.cookie('token', token, {
+    // Save token in cookie
+    res.cookie("token", token, {
       httpOnly: true,
-      expires: new Date(Date.now() + 60 * 60 * 1000), // 1 hour
+      secure: true, // prod me true
+      sameSite: "lax",
+      expires: new Date(Date.now() + 60 * 60 * 1000),
     });
 
-    return res.status(200).json({
-      message: "User logged in successfully",
-      user: {
-        status: true,
-        user: user,
-        token: token,
-        // ⚠️ Avoid sending password back in response
-      },
-      status: true,
-    });
-
+    // Redirect to frontend home
+    return res.redirect("https://shivamwallu.site");
   } catch (err) {
-    console.error(err);
-    return res.status(500).json({
-      message: err.message,
-      status: false,
-    });
+    console.error("Google Callback Error:", err);
+    res.status(500).send("Authentication Failed");
   }
 };
 
@@ -158,4 +165,5 @@ module.exports ={
     signin,
     login,
     googleLogin,
+    googleCallback
 }
