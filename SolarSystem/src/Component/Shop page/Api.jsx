@@ -9,7 +9,7 @@ function Api() {
   const navigate = useNavigate();
  
   useEffect(() => {
-    fetch('https://shivamwallu.site:5000/api/users')  // Ensure this points to your Express server's correct port
+    fetch('https://shivamwallu.site/api/api/users')  // Ensure this points to your Express server's correct port
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

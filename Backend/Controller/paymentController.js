@@ -13,7 +13,7 @@ const MERCHANT_ID="PGTESTPAYUAT86"
 const MERCHANT_BASE_URL="https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay"
 const MERCHANT_STATUS_URL="https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status"
 
-const redirectUrl="https://shivamwallu.site:5000/status"
+const redirectUrl="https://shivamwallu.site/api/status"
 
 const successUrl="https://shivamwallu.site/"
 const failureUrl="https://shivamwallu.site/shop/cart"
