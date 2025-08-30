@@ -133,32 +133,27 @@ function Register() {
 
   // Google Authencation 
 
+const handleLoginSuccess = async (authResult) => {
+  try {
+    console.log("Login successful:", authResult);
 
-  
+    if (authResult.code) {
+      const response = await googleAuth(authResult.code);
+      console.log("User Info:", response.data.user);
 
-
-   const handleLoginSuccess = async (authResult) => {
-    try {
-      console.log("Login successful:", authResult);
-      if (authResult["code"]) {    
-        const response = await googleAuth(authResult.code);
-        console.log("User Info:", response.data.user.user); 
-        localStorage.setItem("user", JSON.stringify(response.data.user.user))
-        navigate("/"); 
-      }
-
-
-    } catch (error) {
-      console.error("Login failed:", error);
+      localStorage.setItem("email", response.data.user.email);
+      navigate("/");
     }
-  };
+  } catch (error) {
+    console.error("Login failed:", error);
+  }
+};
 
-   const loginWithGoogle = useGoogleLogin({
-    onSuccess: handleLoginSuccess,
-    onError: handleLoginSuccess,
-    flow: 'auth-code',
-  });
-
+const loginWithGoogle = useGoogleLogin({
+  onSuccess: handleLoginSuccess,
+  onError: (err) => console.error("Google Login Error:", err),
+  flow: "auth-code",
+});
 
   if(otp){
     return (

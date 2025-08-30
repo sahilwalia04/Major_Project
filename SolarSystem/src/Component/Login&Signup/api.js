@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://shivamwallu.site/api/users", 
-  withCredentials: true, 
+  baseURL: "https://shivamwallu.site/api/users", // backend
+  withCredentials: true,
 });
 
-export const googleAuth = (code) => api.get(`/google?code=${code}`);
+export const googleAuth = (code) => api.post("/google/code", { code });

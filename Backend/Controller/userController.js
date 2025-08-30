@@ -100,70 +100,49 @@ const login = async (req ,res) =>{
 
 
 const googleLogin = async (req, res) => {
-  try {
-    const url = oauth2Client.generateAuthUrl({
-      access_type: "offline",
-      scope: ["profile", "email"],
+   try {
+    const { code } = req.body;
+
+    const { tokens } = await oauth2Client.getToken({
+      code,
+      redirect_uri: "https://shivamwallu.site" // frontend ka redirect_uri
     });
-    return res.redirect(url);
-  } catch (err) {
-    console.error("Google Login Error:", err);
-    res.status(500).send("Login Failed");
-  }
-};
-
-
-
-
-
-const googleCallback = async (req, res) => {
-  try {
-    const code = req.query.code;
-    const { tokens } = await oauth2Client.getToken(code);
     oauth2Client.setCredentials(tokens);
 
+    // User info
     const userRes = await axios.get(
       `https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${tokens.access_token}`
     );
 
     const { email, name, picture } = userRes.data;
 
-    // Check user in DB
     let user = await googleUserModel.findOne({ email });
     if (!user) {
-      user = await googleUserModel.create({
-        username: name,
-        email,
-        image: picture,
-      });
+      user = await googleUserModel.create({ username: name, email, image: picture });
     }
 
-    // Create JWT
-    const token = jwt.sign(
-      { id: user._id },
-      process.env.JWT_SECRET_KEY,
-      { expiresIn: "1h" }
-    );
+    // JWT token
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1h" });
 
-    // Save token in cookie
+    // Cookie set
     res.cookie("token", token, {
       httpOnly: true,
-      secure: true, // prod me true
+      secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
-      expires: new Date(Date.now() + 60 * 60 * 1000),
+      maxAge: 3600000,
     });
 
-    // Redirect to frontend home
-    return res.redirect("https://shivamwallu.site");
+    res.json({ success: true, user });
   } catch (err) {
-    console.error("Google Callback Error:", err);
-    res.status(500).send("Authentication Failed");
+    console.error("Google Auth Error:", err);
+    res.status(500).json({ success: false, message: "Authentication Failed" });
   }
 };
+
+
 
 module.exports ={
     signin,
     login,
     googleLogin,
-    googleCallback
-}
+  }
